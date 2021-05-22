@@ -46,7 +46,7 @@
 </head>
 
 <!------ notice page for  by admin(sumit)  ---------->
-<form method="post">
+<form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   <div class="container register-form">
     <div class="form">
@@ -56,12 +56,17 @@
       <div class="form-content">
         <div class="row">
           <div class="col-md-12">
-            <div class="form-group" id="xyz">
+            <!-- <div class="form-group" id="xyz">
               {% render_field form.message class="form-control" placeholder="Write Your Message Here" %}
-            </div>
-            <div class="form-group">
+            </div>  -->
+            <!-- <div class="form-group" id="xyz">
+              <input type="file" name="myfile">
+               {% render_field form.file_upload class="form-control" placeholder="Upload a file" %} 
+            </div> -->
+            <!-- <div class="form-group">
               {% render_field form.by type="hidden"  class="form-control" placeholder="Your Name" %}
-            </div>
+            </div> -->
+            {{form.as_p}}
           </div>
         </div>
         <button type="submit" class="btnSubmit">Submit</button>

@@ -53,3 +53,7 @@ class Notice(models.Model):
     date=models.DateField(auto_now=True)
     by=models.CharField(max_length=20,null=True,default='school')
     message=models.CharField(max_length=500)
+    file_upload=models.FileField(upload_to='media/files/', null=True, blank=True)
+
+    def __str__(self):
+        return self.message

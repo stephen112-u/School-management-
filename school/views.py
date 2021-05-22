@@ -570,7 +570,7 @@ def teacher_view_attendance_view(request,cl):
 def teacher_notice_view(request):
     form=forms.NoticeForm()
     if request.method=='POST':
-        form=forms.NoticeForm(request.POST)
+        form=forms.NoticeForm(request.POST, request.FILES)
         if form.is_valid():
             form=form.save(commit=False)
             form.by=request.user.first_name

@@ -50,8 +50,14 @@
 <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
   <strong>{{n.date}} || By : {{n.by}}</strong><br> {{n.message}}
+  
+    <a class="btn btn-sm btn-success" href="media/{{n.file_upload}}">
+      {{n.file_upload}}
+    </a>
+  
 </div>
-{%endfor%}
+  
+  {%endfor%}
 
 
 
